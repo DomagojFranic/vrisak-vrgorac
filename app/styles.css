@@ -1,0 +1,8 @@
+.honeycomb-pattern {
+    background-color: #fbbf24;
+    background-image:
+      linear-gradient(30deg, #e5a00d 25%, transparent 25%, transparent 75%, #e5a00d 75%, #e5a00d),
+      linear-gradient(90deg, #e5a00d 25%, transparent 25%, transparent 75%, #e5a00d 75%, #e5a00d),
+      linear-gradient(150deg, #e5a00d 25%, transparent 25%, transparent 75%, #e5a00d 75%, #e5a00d);
+    background-size: 70px 40px;
+}

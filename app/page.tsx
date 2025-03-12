@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image"
 import Link from "next/link"
 import { PlusCircle, Mail } from "lucide-react"
@@ -6,22 +8,60 @@ import Footer from "@/components/Footer"
 import { Button } from "@/components/ui/button"
 import Logo from "@/components/Logo"
 import beehive from "../public/beehive.jpg";
+import { motion} from "framer-motion";
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
+      {/* Navigation Bar */}
       <NavigationBar />
+
+      {/* Video Section */}
       <div className="relative w-full max-h-[1200px] overflow-hidden flex justify-center items-center aspect-video">
-        <video 
+        <video
           className="absolute w-full h-screen object-cover"
           autoPlay
           loop
-          muted>
-          <source src="/intro.mp4" type="video/mp4"/>
+          muted
+        >
+          <source src="/intro.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="flex-1"></div>
+
+      <motion.div
+        className="max-w-full mx-auto my-16 p-8 rounded-lg shadow-lg"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
+        <div className="flex justify-center mb-5">
+          <h2 className="text-5xl font-bold text-black">O nama</h2>
+        </div>
+        <div className="h-0.5 w-60 bg-[#fbb03b] mx-auto mb-10"></div>
+        <div className="flex items-start p-4 rounded-lg">
+          <p className="text-2xl text-black text-center">
+            Pčelarska udruga "Vrisak" iz Vrgorca je aktivna zajednica pčelara koji se bave uzgojem pčela i proizvodnjom kvalitetnih pčelinjih proizvoda. 
+            Nastala je s ciljem promicanja pčelarstva kao važnog dijela lokalne tradicije i ekonomije. 
+            Naša udruga okuplja strastvene pčelare koji su posvećeni održavanju zdrave pčelinske populacije i proizvodnji meda, pčelinjeg voska i drugih pčelinjih proizvoda.
+          </p>
+        </div>
+      </motion.div>
       <Footer />
+      {/* <motion.div
+        className="max-w-full mx-auto my-16 p-8 rounded-lg shadow-lg grid md:grid-cols-3 gap-5 items-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
+        <div className="flex justify-end">
+          <p className="text-2xl text-black">
+            Ako se bavite pčelarstvom i živite na području općine Vrgorac, pridružite nam se!
+          </p>
+        </div>
+        <div className="h-40 w-0.5 bg-[#fbb03b] mx-auto"></div>
+        <div>
+          <h2 className="text-5xl font-bold text-black">Članstvo</h2>
+        </div>
+      </motion.div> */}
+
       {/* <div className="max-w-6xl mx-auto my-50  grid md:grid-cols-2 gap-8">
           <div>
             <Image 

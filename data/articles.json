@@ -1,16 +1,7 @@
 {
     "articles": [
         {
-            "id": "1",
-            "title": "Dobrodošli u našu web stranicu!",
-            "excerpt": "U suradnji s IT tvrtkom Venio Indicium d.o.o. izradili smo našu prvu web stranicu!",
-            "content": "U suradnji s IT tvrtkom Venio Indicium d.o.o. izradili smo našu prvu web stranicu! Ova web stranica će nam pomoći da bolje komuniciramo s našim članovima i javnošću te da podijelimo važne informacije o pčelarstvu i našim aktivnostima.",
-            "date": "2023-04-13",
-            "imageUrl": "/newWebsite.png",
-            "slug": "dobrodosli-u-nasu-web-stranicu"
-        },
-        {
-            "id": "2",
+            "id": "3",
             "title": "Predavanje: raznolikost proizvoda u pčelarskoj proizvodnji",
             "excerpt": "Naši članovi su prisustvovali na predavanju profesora Dana Frangena na temu raznolikosti proizvoda u pčelarskoj proizvodnji.",
             "content": "Naši članovi su prisustvovali na predavanju profesora Dana Frangena na temu raznolikosti proizvoda u pčelarskoj proizvodnji. Tijekom predavanja, naučili smo o različitim proizvodima koje pčele proizvode i kako ih možemo iskoristiti.",
@@ -19,7 +10,7 @@
             "slug": "predavanje-raznolikost-proizvoda"
         },
         {
-            "id": "3",
+            "id": "2",
             "title": "Radionica s djecom iz OŠ „Pčelica“",
             "excerpt": "Naša pčelarska udruga je posjetila polaznike dječjeg vrtića „Pčelica“ iz Vrgorca te im na zanimljiv način predstavila proces dobijanja meda i ostalih pripravaka.",
             "content": "Naša pčelarska udruga je posjetila polaznike dječjeg vrtića „Pčelica“ iz Vrgorca te im na zanimljiv način predstavila proces dobijanja meda i ostalih pripravaka. Djeca su imala priliku vidjeti pčelarske alate i opremu te naučiti o važnosti pčela za naš ekosustav.",
@@ -28,8 +19,8 @@
             "slug": "radionica-s-djecom"
         },
         {
-            "id": "4",
-            "title": "Dodjela nagrade grada Vrgorca 2018",
+            "id": "1",
+            "title": "Dodjela nagrade grada Vrgorca 2018.",
             "excerpt": "Povodom Dana grada Vrgorca, danas je održana svečana sjednica Gradskog vijeća na kojoj su proglašeni ovogodišnji laureati Nagrade grada Vrgorca.",
             "content": "Povodom Dana grada Vrgorca, danas je održana svečana sjednica Gradskog vijeća na kojoj su proglašeni ovogodišnji laureati Nagrade grada Vrgorca. Naša udruga je primila posebno priznanje za doprinos razvoju pčelarstva u našem kraju.",
             "date": "2018-06-29",

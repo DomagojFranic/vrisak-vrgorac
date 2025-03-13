@@ -16,17 +16,17 @@ export default function NewsSection({ articles }: NewsSectionProps) {
         <h2 className="text-3xl font-bold text-black ml-1 mb-8">Novosti</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {articles.map((article) => (
-            <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <Link href={`/novosti/${article.slug}`}>
                 <div className="aspect-video relative">
                   <Image
                     src={article.imageUrl || "/placeholder.svg"}
                     alt={article.title}
                     fill
-                    className="object-cover"/>
+                    className="object-cover px-4"/>
                 </div>
                 <CardHeader>
-                  <h3 className="font-semibold text-lg line-clamp-2 hover:text-blue-600 transition-colors">
+                  <h3 className="font-semibold text-lg line-clamp-2 hover:text-blue-600 transition-colors leading-snug mt-2">
                     {article.title}
                   </h3>
                 </CardHeader>

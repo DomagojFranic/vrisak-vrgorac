@@ -2,9 +2,11 @@
 
 import NavigationBar from "@/components/NavBar"
 import Footer from "@/components/Footer"
-import { CustomButton } from "@/components/CustomButton";
-import NewsSection from "@/components/NewsSection";
-import { motion} from "framer-motion";
+import { CustomButton } from "@/components/CustomButton"
+import NewsSection from "@/components/NewsSection"
+import ScrollToTop from "@/components/ScrollToTop"
+import ContactSection from "@/components/ContactSection";
+import { motion} from "framer-motion"
 import articles from "@/data/articles.json"
 
 export default function Home() {
@@ -62,13 +64,13 @@ export default function Home() {
 
       {/*Kontakt*/}
       <motion.div
-        className="max-w-full mx-auto p-8 rounded-lg bg-red-100"
+        className="max-w-full mx-auto p-8 rounded-lg"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}>
-
+          <ContactSection />
       </motion.div>
-
+      <ScrollToTop />
       <Footer />
       {/* <motion.div
         className="max-w-full mx-auto my-16 p-8 rounded-lg shadow-lg grid md:grid-cols-3 gap-5 items-center"

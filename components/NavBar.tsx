@@ -14,7 +14,7 @@ export default function NavigationBar() {
                 </Link>
             </div>
             <h1 className="text-3xl font-medium text-black ml-6 [text-shadow:_1px_1px_2px_rgba(0,0,0,0.5)]">
-                PČELARSKA UDRUGA "VRISAK" VRGORAC
+                PČELARSKA UDRUGA „VRISAK“ VRGORAC
             </h1>
             <div className="ml-auto mr-5">
                 <NavigationMenu className="text-black">

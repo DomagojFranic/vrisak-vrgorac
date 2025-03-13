@@ -1,14 +1,9 @@
 "use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { PlusCircle, Mail } from "lucide-react"
 import NavigationBar from "@/components/NavBar"
 import Footer from "@/components/Footer"
 import { CustomButton } from "@/components/CustomButton";
 import NewsSection from "@/components/NewsSection";
-import Logo from "@/components/Logo"
-import beehive from "../public/beehive.jpg";
 import { motion} from "framer-motion";
 import articles from "@/data/articles.json"
 

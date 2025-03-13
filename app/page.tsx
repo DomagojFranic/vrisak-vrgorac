@@ -6,9 +6,11 @@ import { PlusCircle, Mail } from "lucide-react"
 import NavigationBar from "@/components/NavBar"
 import Footer from "@/components/Footer"
 import { CustomButton } from "@/components/CustomButton";
+import NewsSection from "@/components/NewsSection";
 import Logo from "@/components/Logo"
 import beehive from "../public/beehive.jpg";
 import { motion} from "framer-motion";
+import articles from "@/data/articles.json"
 
 export default function Home() {
   return (
@@ -48,12 +50,30 @@ export default function Home() {
           </p>
         </div>
         <div className="flex justify-center items-center w-full mt-10">
-          <CustomButton className="bg-[#fbb03b] text-white text-lg px-6 py-3 rounded-lg shadow-md hover:bg-[#e09e34] transition-all md:text-lg">
+          <CustomButton className="bg-[#fbb03b] text-white text-lg px-6 py-3 rounded-lg shadow-md hover:bg-[#e09e34] transition-all duration-300 transform hover:scale-105 md:text-lg">
             Saznajte više
           </CustomButton>
         </div>
       </motion.div>
       
+      {/*Novosti*/}
+      <motion.div
+        className="max-w-full mx-auto p-8 rounded-lg"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
+          <NewsSection articles={articles.articles} />
+      </motion.div>
+
+      {/*Kontakt*/}
+      <motion.div
+        className="max-w-full mx-auto p-8 rounded-lg bg-red-100"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}>
+
+      </motion.div>
+
       <Footer />
       {/* <motion.div
         className="max-w-full mx-auto my-16 p-8 rounded-lg shadow-lg grid md:grid-cols-3 gap-5 items-center"

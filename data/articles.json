@@ -4,28 +4,51 @@
             "id": "3",
             "title": "Predavanje: raznolikost proizvoda u pčelarskoj proizvodnji",
             "excerpt": "Naši članovi su prisustvovali na predavanju profesora Dana Frangena na temu raznolikosti proizvoda u pčelarskoj proizvodnji.",
-            "content": "Naši članovi su prisustvovali na predavanju profesora Dana Frangena na temu raznolikosti proizvoda u pčelarskoj proizvodnji. Tijekom predavanja, naučili smo o različitim proizvodima koje pčele proizvode i kako ih možemo iskoristiti.",
+            "content": "Pčelarstvo je jedna od najstarijih i najvažnijih grana poljoprivrede koja nam osigurava med, vosak, propolis, matičnu mliječ i ostale proizvode pčela. U posljednje vrijeme pčelarstvo je postalo sve popularnije, a mnogi pčelari se sve više fokusiraju na raznovrsnost proizvoda koje mogu proizvesti. Stoga je u prostorijama grada Vrgorca održano predavanje profesora Daria Frangena s učilišta APIS i Hrvatskog instituta za ruralni razvoj, pčelarstvo, lovstvo i ekologiju na temu raznolikosti proizvoda u pčelarskoj proizvodnji. Naši članovi su čuli mnogo toga o važnosti raznolikosti proizvoda u pčelarskoj proizvodnji, ne samo zbog ekonomskog aspekta, već i zbog zdravstvenih koristi koje ovi proizvodi pružaju. Primjerice, med ima mnoge zdravstvene prednosti, uključujući sposobnost poboljšanja imunološkog sustava, smanjenja upala i poticanja zacjeljivanja rana. Također, matična mliječ se koristi za jačanje imunološkog sustava i poboljšanje kognitivnih funkcija. Međutim, osim tradicionalnih proizvoda kao što su med i vosak, naglasak je stavljen i na druge proizvode koji su manje poznati široj publici. Primjerice, propolis se koristi u medicini kao prirodni antibiotik i antioksidans, a također se koristi i u proizvodnji kozmetičkih proizvoda zbog svojih ljekovitih svojstava. Također, pčelari proizvode i druge manje poznate pčelinje proizvode, kao što su cvjetni prah, koji se koristi kao prehrambeni dodatak zbog svojih nutritivnih vrijednosti, te pčelinji otrov, koji se koristi u alternativnoj medicini za liječenje artritisa i drugih upalnih bolesti. Raznolikost proizvoda u pčelarskoj proizvodnji također ima pozitivan utjecaj na pčelinju populaciju i okoliš. Pčele se hrane ne samo medom, već i drugim pčelinjim proizvodima te imaju koristi od raznovrsne prehrane. Osim toga, proizvodnja različitih pčelinjih proizvoda može doprinijeti održivosti pčelarstva i smanjenju ovisnosti o samo jednom proizvodu. U zaključku, raznolikost proizvoda u pčelarskoj proizvodnji pruža brojne zdravstvene, ekonomske i ekološke prednosti. Pčelari bi trebali istraživati različite načine kako bi proširili svoj asortiman proizvoda i uživali u prednostima koje raznolikost donosi.",
             "date": "2023-03-15",
-            "imageUrl": "/predavanjeRaznolikost.jpg",
-            "slug": "predavanje-raznolikost-proizvoda"
+            "images": [
+                "/predavanjeRaznolikost.jpg",
+                "/predavanjeRaznolikost2.jpg"
+            ],
+            "slug": "predavanje-raznolikost-proizvoda",
+            "category": "novosti"
         },
         {
             "id": "2",
             "title": "Radionica s djecom iz OŠ „Pčelica“",
             "excerpt": "Naša pčelarska udruga je posjetila polaznike dječjeg vrtića „Pčelica“ iz Vrgorca te im na zanimljiv način predstavila proces dobijanja meda i ostalih pripravaka.",
-            "content": "Naša pčelarska udruga je posjetila polaznike dječjeg vrtića „Pčelica“ iz Vrgorca te im na zanimljiv način predstavila proces dobijanja meda i ostalih pripravaka. Djeca su imala priliku vidjeti pčelarske alate i opremu te naučiti o važnosti pčela za naš ekosustav.",
+            "content": "Pčele su nevjerojatni insekti koji imaju važnu ulogu u oprašivanju biljaka i održavanju ekosustava. Osim toga, proizvode med, vosak i ostale vrijedne proizvode koji se koriste u mnogim industrijama. Međutim, mnogi ljudi ne razumiju koliko su pčele važne za naš svijet. Zbog toga je naša pčelarska udruga odlučila posjetiti polaznike dječjeg vrtića „Pčelica“ iz Vrgorca i educirati ih o pčelarstvu. Nekoliko naših vrijednih članova posjetilo je djecu i upoznalo ih sa svim aspektima pčelarstva. Djeca su naučila kako pčele sakupljaju nektar iz cvjetova i pretvaraju ga u med, kako nastaje saće te kako se vosak koristi za izradu svijeća i drugih proizvoda. Također im je prikazana zaštitna oprema koja se koristi za zaštitu od uboda pčela, a imali su priliku i isprobati je, što im je pružilo dodatno iskustvo. Osim toga, djeca su imala priliku vidjeti košnice u kojima žive pčele. Naši pčelari objasnili su im kako se pravilno brinuti o pčelama, kako im osigurati hranu i vodu te kako ih zaštititi od bolesti i štetnika. Cilj ovog događaja bio je podići svijest o važnosti pčela i očuvanju njihovih populacija. Djeca su bila oduševljena ovim iskustvom i pokazala su veliku znatiželju za ovu temu. Ovo nije prvi put da pčelarska udruga „Vrisak“ organizira ovakve događaje. Udruga je aktivno uključena u zajednicu i nastoji podići svijest o važnosti pčela. Nadaju se da će ovakve aktivnosti potaknuti djecu da zavole pčele i možda se jednog dana i sami uključe u pčelarstvo. U konačnici, educiranje djece o pčelarstvu važno je za održavanje održivog ekosustava i očuvanje pčelinjih populacija. Zahvaljujući našoj pčelarskoj udruzi, djeca su imala priliku naučiti o ovom važnom području na interaktivan i zabavan način.",
             "date": "2022-11-07",
-            "imageUrl": "/radionicaDjecjiVrtic.jpeg",
-            "slug": "radionica-s-djecom"
+            "images": [
+                "/radionicaDjecjiVrtic.jpeg",
+                "/radionicaDjecjiVrtic2.jpeg",
+                "/radionicaDjecjiVrtic3.jpeg",
+                "/radionicaDjecjiVrtic4.jpeg",
+                "/radionicaDjecjiVrtic5.jpeg",
+                "/radionicaDjecjiVrtic6.jpeg",
+                "/radionicaDjecjiVrtic7.jpeg",
+                "/radionicaDjecjiVrtic8.jpeg",
+                "/radionicaDjecjiVrtic9.jpeg",
+                "/radionicaDjecjiVrtic10.jpeg",
+                "/radionicaDjecjiVrtic11.jpeg",
+                "/radionicaDjecjiVrtic12.jpeg",
+                "/radionicaDjecjiVrtic13.jpeg",
+                "/radionicaDjecjiVrtic14.jpeg"
+            ],
+            "slug": "radionica-s-djecom",
+            "category": "zajednica"
         },
         {
             "id": "1",
             "title": "Dodjela nagrade grada Vrgorca 2018.",
             "excerpt": "Povodom Dana grada Vrgorca, danas je održana svečana sjednica Gradskog vijeća na kojoj su proglašeni ovogodišnji laureati Nagrade grada Vrgorca.",
-            "content": "Povodom Dana grada Vrgorca, danas je održana svečana sjednica Gradskog vijeća na kojoj su proglašeni ovogodišnji laureati Nagrade grada Vrgorca. Naša udruga je primila posebno priznanje za doprinos razvoju pčelarstva u našem kraju.",
+            "content": "Povodom Dana grada Vrgorca, danas je u obnovljenoj i dupkom ispunjenoj višenamjenskoj dvorani održana svečana sjednica Gradskog vijeća na kojoj su proglašeni ovogodišnji laureati Nagrade grada Vrgorca. Osobnu nagradu ponijeli su mjesni odbornik iz Draževitića Davor Barbir i dugogodišnji član Gradskog orkestra „Ljudevit Bačić“ Ante Živković. Skupne nagrade dobili su Učenička zadruga „Bušin“ i Pčelarska udruga „Vrisak“. Plaketom i Grbom Grada Vrgorca nagrađen je povjesničar i novinar Branko Radonić, dok je nagradu za životno djelo dobio profesor i planinar Nikola Jurić. Na svečanoj sjednici Gradskog vijeća, koju je otvorio njegov predsjednik Ljubomir Erceg, gradonačelnik Ante Pranić održao je prezentaciju dosad realiziranih i budućih planiranih gradskih projekata. Okupljenima su se obratili i potpredsjednik Hrvatskog sabora Božo Petrov te splitsko-dalmatinski dožupan Ante Šošić. Obojica su govorila o važnosti projekata radi zadržavanja stanovništva na područjima poput Vrgorca i Dalmatinske zagore. U završnom dijelu programa, gradonačelnici Vrgorca, Hvara i Starog Grada te načelnici Gradca, Sućurja i Jelse potpisali su sporazum o prijateljstvu. Njegova je prvenstvena namjera zajedničko lobiranje za izgradnju tunela i brze ceste Ravča-Drvenik. U glazbenom programu sjednice nastupili su Mandolinski orkestar Vrgorac i Pučki pjevači župe Veliki Prolog - Dusina.",
             "date": "2018-06-29",
-            "imageUrl": "/gradVrgoracNagrada.jpg",
-            "slug": "dodjela-nagrade-grada-vrgorca-2018"
+            "images": [
+                "/gradVrgoracNagrada.jpg"
+            ],
+            "slug": "dodjela-nagrade-grada-vrgorca-2018",
+            "category": "novosti"
         }
     ]
 }  

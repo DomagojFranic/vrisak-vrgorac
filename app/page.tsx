@@ -21,7 +21,9 @@ export default function Home() {
           className="absolute w-full h-screen object-cover"
           autoPlay
           loop
-          muted>
+          muted
+          disablePictureInPicture
+          controlsList="none">
           <source src="/intro.mp4" type="video/mp4" />
         </video>
       </div>
@@ -72,74 +74,6 @@ export default function Home() {
       </motion.div>
       <ScrollToTop />
       <Footer />
-      {/* <motion.div
-        className="max-w-full mx-auto my-16 p-8 rounded-lg shadow-lg grid md:grid-cols-3 gap-5 items-center"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}>
-        <div className="flex justify-end">
-          <p className="text-2xl text-black">
-            Ako se bavite pčelarstvom i živite na području općine Vrgorac, pridružite nam se!
-          </p>
-        </div>
-        <div className="h-40 w-0.5 bg-[#fbb03b] mx-auto"></div>
-        <div>
-          <h2 className="text-5xl font-bold text-black">Članstvo</h2>
-        </div>
-      </motion.div> */}
-
-      {/* <div className="max-w-6xl mx-auto my-50  grid md:grid-cols-2 gap-8">
-          <div>
-            <Image 
-              src={beehive}
-              alt="Beehive"
-              width={1920}
-              height={1280}/> 
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold text-slate-300 mb-6">O nama</h2>
-            <p className="text-slate-600 mb-4">Mi smo pčelarska udruga iz grada Vrgorca.</p>
-            <p className="text-slate-600">U ovom dijelu možete saznati više o nama.</p>
-          </div>
-      </div> */}
-      
-
-      {/* <section className="bg-gray-300 py-16 px-6 flex-1">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-700 mb-4">
-            Pčelarska udruga
-            <br />
-            "Vrisak" Vrgorac
-          </h2>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button asChild className="flex items-center gap-2">
-              <Link href="/dodaj-clanak">
-                <PlusCircle className="h-5 w-5" />
-                Dodaj novi članak
-              </Link>
-            </Button>
-            <Button asChild variant="outline" className="flex items-center gap-2">
-              <Link href="/kontakt">
-                <Mail className="h-5 w-5" />
-                Kontaktirajte nas
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 px-6 bg-white">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-          <div>
-            <Logo/>
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold text-slate-300 mb-6">O nama</h2>
-            <p className="text-slate-600 mb-4">Mi smo pčelarska udruga iz grada Vrgorca.</p>
-            <p className="text-slate-600">U ovom dijelu možete saznati više o nama.</p>
-          </div>
-        </div>
-      </section> */}
     </main>
   )
 }

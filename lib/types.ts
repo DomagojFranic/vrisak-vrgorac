@@ -4,6 +4,6 @@ export interface Article {
     excerpt: string
     content: string
     date: string
-    imageUrl: string
+    images: string[]
     slug: string
 }

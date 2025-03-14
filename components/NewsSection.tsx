@@ -17,10 +17,10 @@ export default function NewsSection({ articles }: NewsSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {articles.map((article) => (
             <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <Link href={`/novosti/${article.slug}`}>
+              <Link href={`/novosti/${article.slug}`} key={article.id}>
                 <div className="aspect-video relative">
                   <Image
-                    src={article.imageUrl || "/placeholder.svg"}
+                    src={article.images[0] || "/placeholder.svg"}
                     alt={article.title}
                     fill
                     className="object-cover px-4"/>

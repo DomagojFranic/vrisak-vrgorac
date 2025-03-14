@@ -6,4 +6,5 @@ export interface Article {
     date: string
     images: string[]
     slug: string
+    category: string
 }

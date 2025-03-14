@@ -28,7 +28,7 @@ export default function NavigationBar() {
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
-                            <Link href="#" legacyBehavior passHref>
+                            <Link href="/novosti" legacyBehavior passHref>
                                 <NavigationMenuLink className="text-xl font-medium hover:bg-[#fccf89] transition-colors">
                                     Novosti
                                 </NavigationMenuLink>

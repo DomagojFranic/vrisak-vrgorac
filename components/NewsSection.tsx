@@ -10,11 +10,13 @@ interface NewsSectionProps {
 }
 
 export default function NewsSection({ articles }: NewsSectionProps) {
+  const gridColumns = articles.length >= 4 ? "lg:grid-cols-4" : articles.length >= 3 ? "lg:grid-cols-3" : articles.length >= 2 ? "lg:grid-cols-2" : "lg:grid-cols-1"
+  
   return (
     <section className="py-8 px-8 bg-[#fddfb0] rounded-md">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-black ml-1 mb-8">Novosti</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${gridColumns} gap-6`}>
           {articles.map((article) => (
             <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105">
               <Link href={`/novosti/${article.slug}`} key={article.id}>

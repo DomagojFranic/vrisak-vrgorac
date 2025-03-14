@@ -37,14 +37,14 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     </div>
 
     {/* Article Content */}
-    <div className="max-w-4xl mx-auto px-6 py-12">
+    <div className="max-w-4xl mx-auto mb-10 px-6 py-12">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold text-slate-800 mb-4">{article.title}</h1>
-        <time className="text-slate-500">{format(new Date(article.date), "d. MMMM yyyy.", { locale: hr })}</time>
+        <h1 className="text-4xl font-bold text-black mb-4">{article.title}</h1>
+        <time className="text-gray-500">{format(new Date(article.date), "d. MMMM yyyy.", { locale: hr })}</time>
       </header>
 
       <div className="prose prose-slate max-w-none">
-        <p className="text-lg text-slate-600 leading-relaxed">{article.content}</p>
+        <p className="text-lg text-black leading-relaxed">{article.content}</p>
       </div>
     </div>
   </article>

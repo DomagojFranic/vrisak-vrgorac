@@ -36,15 +36,29 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
         }
     }, [closeModal])
 
+    const handleArrowKeys = useCallback((event: KeyboardEvent) => {
+        if (event.key === "ArrowLeft") {
+            handlePrevious()
+        } 
+        else if (event.key === "ArrowRight") {
+            handleNext()
+        }
+        else if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+            event.preventDefault()
+        }
+    }, [handlePrevious, handleNext])
+
     useEffect(() => {
         if (isModalOpen) {
             document.addEventListener("keydown", handleEscKey)
+            document.addEventListener("keydown", handleArrowKeys)
         }
 
         return () => {
             document.removeEventListener("keydown", handleEscKey)
+            document.removeEventListener("keydown", handleArrowKeys)
         }
-    }, [isModalOpen, handleEscKey])
+    }, [isModalOpen, handleEscKey, handleArrowKeys])
 
     if (images.length === 0) {
         return (

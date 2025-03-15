@@ -11,8 +11,8 @@ export default function MisijaVizija() {
         <article className="flex flex-col gap-6">
             <div className="flex justify-center my-4">
                 <Image
-                    src="/povijest.jpg"
-                    alt="Povijest udruge"
+                    src="/clanstvo.jpg"
+                    alt="Clanstvo"
                     width={800}
                     height={400}
                     // className="relative w-full aspect-[16/9] rounded-lg shadow-md overflow-hidden"
@@ -20,12 +20,12 @@ export default function MisijaVizija() {
                     priority/>
             </div>
             <header className="text-start">
-                <h1 className="text-2xl md:text-3xl font-bold text-black">Povijest udruge</h1>
+                <h1 className="text-2xl md:text-3xl font-bold text-black">Članstvo</h1>
             </header>
 
             <div className="prose max-w-none">
                 <p className="text-lg text-black leading-relaxed">
-                    Pčelarska udruga „Vrisak“ nastala je kao entuzijastični poduhvat nekolicine zaljubljenika u pčelarstvo.<br/><br/> Na početku je bila mala skupina ljudi koji su dijelili strast prema pčelama i željeli unaprijediti svoje vještine i znanje. S vremenom, udruga je rasla i razvijala se, te danas broji više od 50 članova. Tijekom godina, mnogi članovi su se posvetili razvoju udruge, a sva upravljačka tijela, kroz svoj rad, dali su značajan doprinos ostvarenju naših ciljeva. Zahvaljujemo svim dosadašnjim članovima uprave na njihovom trudu, odricanju i postignućima, koji su omogućili uspješan razvoj udruge. Njihova predanost postavila je temelje za buduće generacije pčelara i jamči da će naša udruga i dalje rasti, razvijati se i ostati vjerna svojoj misiji.
+                    Članstvo u Pčelarskoj udruzi „Vrisak“ omogućava svim zainteresiranim pčelarima, bez obzira na njihovu razinu iskustva, da postanu dio zajednice koja dijeli strast prema pčelarstvu. Članovi imaju pravo sudjelovati u svim aktivnostima udruge, pristupiti edukacijama, primati savjete od iskusnijih pčelara i sudjelovati u promociji pčelinjih proizvoda. Za sve nove članove, udruga nudi podršku kroz mentorstvo, organizirane tečajeve i savjetovanja. Članstvo u udruzi također uključuje sudjelovanje u zajedničkim projektima, te mogućnost da doprinosite razvoju pčelarstva na ovom području. <br/><br/>Ako se prepoznaješ u ovome, pridruži nam se!
                 </p>
             </div>
         </article>

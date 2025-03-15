@@ -1,7 +1,6 @@
 'use client'
 
 import { notFound } from "next/navigation"
-import Image from "next/image"
 import { format } from "date-fns"
 import { hr } from "date-fns/locale"
 import NavigationBar from "@/components/NavBar"

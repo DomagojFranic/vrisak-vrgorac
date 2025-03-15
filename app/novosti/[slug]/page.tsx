@@ -16,7 +16,6 @@ interface ArticlePageProps {
 }
 
 export default function ArticlePage({ params }: ArticlePageProps) {
-    
   const article = articles.articles.find((article) => article.slug === params.slug)
 
   if (!article) {
@@ -25,31 +24,30 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <main className="min-h-screen flex flex-col">
-  <NavigationBar />
+      <NavigationBar />
 
-  <article className="flex-1">
-    {/* Image Gallery - Centered, Responsive & Larger */}
-    <div className="w-full max-w-5xl mx-auto mt-10 px-4">
-      <ImageGallery 
-        images={article.images || [article.images[0]]} 
-        alt={article.title}/>
-    </div>
+      <article className="flex-1">
+        {/* Image Gallery - Centered, Responsive & Larger */}
+        <div className="w-full max-w-5xl mx-auto mt-10 px-4">
+          <ImageGallery 
+            images={article.images || [article.images[0]]} 
+            alt={article.title}/>
+        </div>
 
-    {/* Article Content */}
-    <div className="max-w-4xl mx-auto mb-10 px-6 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-black mb-4">{article.title}</h1>
-        <time className="text-gray-500">{format(new Date(article.date), "d. MMMM yyyy.", { locale: hr })}</time>
-      </header>
+        {/* Article Content */}
+        <div className="max-w-4xl mx-auto mb-10 px-6 py-12">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-black mb-4">{article.title}</h1>
+            <time className="text-gray-500">{format(new Date(article.date), "d. MMMM yyyy.", { locale: hr })}</time>
+          </header>
 
-      <div className="prose prose-slate max-w-none">
-        <p className="text-lg text-black leading-relaxed">{article.content}</p>
-      </div>
-    </div>
-  </article>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-lg text-black leading-relaxed">{article.content}</p>
+          </div>
+        </div>
+      </article>
 
-  <Footer />
-</main>
-
+      <Footer />
+    </main>
   )
 }

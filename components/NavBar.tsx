@@ -50,6 +50,17 @@ export default function NavigationBar() {
                             <NavigationMenuContent className="[border-top-left-radius:0] [border-top-right-radius:10px] [border-bottom-left-radius:10px] [border-bottom-right-radius:10px]">
                                 <ul className="grid w-48 gap-1 p-2">
                                     <li>
+                                        <Link href="/misija-vizija" legacyBehavior passHref>
+                                            <NavigationMenuLink
+                                                className={cn(
+                                                    "block select-none space-y-1 rounded-md p-3",
+                                                    "hover:bg-[#fddfb0] text-md text-black",
+                                                )}>
+                                                Misija i vizija
+                                            </NavigationMenuLink>
+                                        </Link>
+                                    </li>
+                                    <li>
                                         <Link href="#" legacyBehavior passHref>
                                             <NavigationMenuLink
                                                 className={cn(

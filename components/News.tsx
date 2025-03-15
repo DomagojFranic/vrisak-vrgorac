@@ -14,7 +14,7 @@ export default function News({ articles, category }: NewsSectionProps) {
     const filteredArticles = articles.filter((article) => article.category === category);
 
     return (
-        <section className="py-8 px-8  rounded-md">
+        <section className="py-8 px-8 rounded-md">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold text-black ml-1 mb-8 underline underline-offset-8 decoration-[#fbb03b]">
                     {category === "novosti" ? "Novosti" : "U zajednici"}

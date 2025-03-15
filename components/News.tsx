@@ -19,6 +19,16 @@ export default function News({ articles, category }: NewsSectionProps) {
                 <h2 className="text-4xl font-bold text-black ml-1 mb-8 underline underline-offset-8 decoration-[#fbb03b]">
                     {category === "novosti" ? "Novosti" : "U zajednici"}
                 </h2>
+                
+                {category === "zajednica" && (
+                    <div className="prose max-w-none mb-10">
+                        <p className="text-lg text-black leading-relaxed">
+                        Pčelarska udruga „Vrisak“ razumije važnost suradnje s lokalnom zajednicom. Kroz naše aktivnosti, nastojimo imati pozitivan utjecaj na društvo i okoliš. Kroz edukaciju i promociju, želimo podići svijest o važnosti pčela za ekosustav i zdravlje ljudi, te omogućiti lokalnim pčelarima da unaprijede svoje poslovanje.
+                        <br/>Također, potičemo potrošnju lokalnih pčelinjih proizvoda, čime doprinosimo očuvanju i razvoju lokalne ekonomije, ali i zdravlja populacije.
+                        <br/>Udruga se također bavi organiziranjem volonterskih aktivnosti, kao što su čišćenje okoliša, sadnja biljaka koje podržavaju oprašivače i sudjelovanje u lokalnim manifestacijama, čime doprinosimo očuvanju tradicije i održivom razvoju naše zajednice.
+                        </p>
+                    </div>
+                )}
 
                 <div className="flex flex-col gap-6">
                     {filteredArticles.map((article) => (

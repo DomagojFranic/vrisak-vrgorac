@@ -12,7 +12,7 @@ export default function MisijaVizija() {
             <div className="flex justify-center my-4">
                 <Image
                     src="/misijaVizija.jpg"
-                    alt="Radionica s djecom"
+                    alt="Misija i vizija"
                     width={800}
                     height={400}
                     className="relative w-full aspect-[16/9] rounded-lg shadow-md overflow-hidden"

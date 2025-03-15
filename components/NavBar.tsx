@@ -61,6 +61,17 @@ export default function NavigationBar() {
                                         </Link>
                                     </li>
                                     <li>
+                                        <Link href="/ciljevi-aktivnosti" legacyBehavior passHref>
+                                            <NavigationMenuLink
+                                                className={cn(
+                                                    "block select-none space-y-1 rounded-md p-3",
+                                                    "hover:bg-[#fddfb0] text-md text-black",
+                                                )}>
+                                                Ciljevi i aktivnosti
+                                            </NavigationMenuLink>
+                                        </Link>
+                                    </li>
+                                    <li>
                                         <Link href="#" legacyBehavior passHref>
                                             <NavigationMenuLink
                                                 className={cn(

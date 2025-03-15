@@ -36,7 +36,7 @@ export default function NavigationBar() {
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
-                            <Link href="#" legacyBehavior passHref>
+                            <Link href="/zajednica" legacyBehavior passHref>
                                 <NavigationMenuLink className="text-xl font-medium hover:bg-[#fccf89] transition-colors">
                                     U zajednici
                                 </NavigationMenuLink>

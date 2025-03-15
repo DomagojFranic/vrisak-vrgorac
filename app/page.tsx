@@ -41,11 +41,17 @@ export default function Home() {
         </div>
         <div className="flex items-start p-4 rounded-lg">
           <p className="text-2xl text-black text-center leading-relaxed">
-            Pčelarska udruga „Vrisak“ iz Vrgorca je aktivna zajednica pčelara koji se bave uzgojem pčela i proizvodnjom kvalitetnih pčelinjih proizvoda. 
+            Pčelarska udruga Vrisak osnovana je s ciljem okupljanja pčelara s područja grada Vrgorca i okolice. Naša udruga nastoji potaknuti razvoj pčelarstva kroz zajedništvo, edukaciju i podršku svim svojim članovima. 
+            <br/>Smatramo da je pčelarstvo ne samo poljoprivredna djelatnost, već i važan faktor u očuvanju okoliša i bioraznolikosti, a uz to doprinosi i gospodarskom razvoju lokalne zajednice.
+            Udruga je otvorena za sve koji žele učiti, dijeliti iskustva i doprinijeti očuvanju tradicije pčelarstva.
+            <br/><br/>Tijekom godina, naša udruga postala je prepoznatljivo mjesto okupljanja pčelara, ali i svih onih koji žele bolje razumjeti važnost pčela i njihovih proizvoda.
+            Središnji cilj nam je unaprijediti kvalitetu pčelarenja i širiti svijest o važnosti pčela za ekosustav, kao i za lokalnu ekonomiju.
+
+            {/* Pčelarska udruga „Vrisak“ iz Vrgorca je aktivna zajednica pčelara koji se bave uzgojem pčela i proizvodnjom kvalitetnih pčelinjih proizvoda. 
             Nastala je s ciljem promicanja pčelarstva kao važnog dijela lokalne tradicije i ekonomije. 
-            Naša udruga okuplja strastvene pčelare koji su posvećeni održavanju zdrave pčelinske populacije i proizvodnji meda, pčelinjeg voska i drugih pčelinjih proizvoda.
-            <br/>Kroz naš rad, nastojimo edukirati lokalnu zajednicu o važnosti pčelarstva i njegovom utjecaju na okoliš. Također, podržavamo razvoj lokalnog gospodarstva kroz proizvodnju i promociju naših proizvoda.
-            <br/><br/>Ako se bavite pčelarstvom i živite na području općine Vrgorac, pridružite nam se! 
+            Naša udruga okuplja strastvene pčelare koji su posvećeni održavanju zdrave pčelinske populacije i proizvodnji meda, pčelinjeg voska i drugih pčelinjih proizvoda. */}
+            {/* <br/>Kroz naš rad, nastojimo edukirati lokalnu zajednicu o važnosti pčelarstva i njegovom utjecaju na okoliš. Također, podržavamo razvoj lokalnog gospodarstva kroz proizvodnju i promociju naših proizvoda.
+            <br/><br/>Ako se bavite pčelarstvom i živite na području općine Vrgorac, pridružite nam se!  */}
           </p>
         </div>
         <div className="flex justify-center items-center w-full mt-10">

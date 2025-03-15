@@ -17,32 +17,36 @@ export default function NewsSection({ articles }: NewsSectionProps) {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-black ml-1 mb-8">Novosti</h2>
         <div className={`grid grid-cols-1 md:grid-cols-2 ${gridColumns} gap-6`}>
-          {articles.map((article) => (
-            <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <Link href={`/novosti/${article.slug}`} key={article.id}>
-                <div className="aspect-video relative">
-                  <Image
-                    src={article.images[0] || "/placeholder.svg"}
-                    alt={article.title}
-                    fill
-                    className="object-cover px-4"/>
-                </div>
-                <CardHeader>
-                  <h3 className="font-semibold text-lg line-clamp-2 hover:text-blue-600 transition-colors leading-snug mt-2">
-                    {article.title}
-                  </h3>
-                </CardHeader>
-                <CardContent className="mb-2">
-                  <p className="text-sm text-gray-800 line-clamp-3">{article.excerpt}</p>
-                </CardContent>
-                <CardFooter>
-                  <time className="text-sm text-gray-400">
-                    {format(new Date(article.date), "d. MMMM yyyy.", { locale: hr })}
-                  </time>
-                </CardFooter>
-              </Link>
-            </Card>
-          ))}
+          {articles.map((article) => {
+            const categoryPath = article.category === "zajednica" ? "zajednica" : "novosti";
+            
+            return (
+              <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                <Link href={`/${categoryPath}/${article.slug}`} key={article.id}>
+                  <div className="aspect-video relative">
+                    <Image
+                      src={article.images[0] || "/placeholder.svg"}
+                      alt={article.title}
+                      fill
+                      className="object-cover px-4"/>
+                  </div>
+                  <CardHeader>
+                    <h3 className="font-semibold text-lg line-clamp-2 hover:text-blue-600 transition-colors leading-snug mt-2">
+                      {article.title}
+                    </h3>
+                  </CardHeader>
+                  <CardContent className="mb-2">
+                    <p className="text-sm text-gray-800 line-clamp-3">{article.excerpt}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <time className="text-sm text-gray-400">
+                      {format(new Date(article.date), "d. MMMM yyyy.", { locale: hr })}
+                    </time>
+                  </CardFooter>
+                </Link>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -7,22 +7,23 @@ import type { Article } from "@/lib/types";
 
 interface NewsSectionProps {
     articles: Article[];
+    category: string;
 }
 
-export default function News({ articles }: NewsSectionProps) {
-    const filteredArticles = articles.filter((article) => article.category === "novosti");
+export default function News({ articles, category }: NewsSectionProps) {
+    const filteredArticles = articles.filter((article) => article.category === category);
 
     return (
         <section className="py-8 px-8  rounded-md">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold text-black ml-1 mb-8 underline underline-offset-8 decoration-[#fbb03b]">
-                    Novosti
+                    {category === "novosti" ? "Novosti" : "U zajednici"}
                 </h2>
 
                 <div className="flex flex-col gap-6">
                     {filteredArticles.map((article) => (
                     <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-start gap-4">
-                        <Link href={`/novosti/${article.slug}`} key={article.id} className="flex flex-row w-full">
+                        <Link href={`/${category}/${article.slug}`} key={article.id} className="flex flex-row w-full">
                             {/* Image Section */}
                             <div className="relative w-[30%] h-auto aspect-video">
                                 <Image

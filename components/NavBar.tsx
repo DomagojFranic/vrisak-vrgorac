@@ -104,7 +104,7 @@ export default function NavigationBar() {
                             <NavigationMenuContent className="[border-top-left-radius:0] [border-top-right-radius:10px] [border-bottom-left-radius:10px] [border-bottom-right-radius:10px]">
                                 <ul className="grid w-48 gap-1 p-2">
                                     <li>
-                                        <Link href="#" legacyBehavior passHref>
+                                        <Link href="/pcelarstvo" legacyBehavior passHref>
                                             <NavigationMenuLink
                                                 className={cn(
                                                     "block select-none space-y-1 rounded-md p-3",
@@ -115,7 +115,7 @@ export default function NavigationBar() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#" legacyBehavior passHref>
+                                        <Link href="/pcele" legacyBehavior passHref>
                                             <NavigationMenuLink
                                                 className={cn(
                                                     "block select-none space-y-1 rounded-md p-3",
@@ -126,7 +126,7 @@ export default function NavigationBar() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#" legacyBehavior passHref>
+                                        <Link href="/zanimljivosti" legacyBehavior passHref>
                                             <NavigationMenuLink
                                                 className={cn(
                                                     "block select-none space-y-1 rounded-md p-3",

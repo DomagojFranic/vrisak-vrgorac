@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop"
 import ContactSection from "@/components/ContactSection";
 import { motion} from "framer-motion"
 import articles from "@/data/articles.json"
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -56,7 +57,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center w-full mt-10">
           <CustomButton className="bg-[#fbb03b] text-white text-lg px-6 py-3 rounded-lg shadow-md hover:bg-[#e09e34] transition-all duration-300 transform hover:scale-105 md:text-lg">
-            Saznajte više
+            <Link href="/misija-vizija">Saznajte više</Link>
           </CustomButton>
         </div>
       </motion.div>

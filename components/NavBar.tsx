@@ -72,7 +72,7 @@ export default function NavigationBar() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#" legacyBehavior passHref>
+                                        <Link href="/povijest" legacyBehavior passHref>
                                             <NavigationMenuLink
                                                 className={cn(
                                                     "block select-none space-y-1 rounded-md p-3",

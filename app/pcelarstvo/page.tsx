@@ -20,7 +20,7 @@ export default function Pcelarstvo() {
                     priority/>
             </div>
             <header className="text-start">
-                <h1 className="text-2xl md:text-3xl font-bold text-black">O pčelarstvo</h1>
+                <h1 className="text-2xl md:text-3xl font-bold text-black">O pčelarstvu</h1>
             </header>
 
             <div className="prose max-w-none">

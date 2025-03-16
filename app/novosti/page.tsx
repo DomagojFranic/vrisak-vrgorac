@@ -1,3 +1,4 @@
+"usec-client"
 import NavigationBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import News from "@/components/News";

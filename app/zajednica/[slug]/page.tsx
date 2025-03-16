@@ -8,15 +8,15 @@ import articles from "@/data/articles.json"
 import Footer from "@/components/Footer"
 import { ImageGallery } from "@/components/ImageGallery"
 import { generateStaticParams } from "./params"
+import { use } from "react"
 
 interface ArticlePageProps {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
 export default function ArticlePage({ params }: ArticlePageProps) {
-  const article = articles.articles.find((article) => article.slug === params.slug && article.category === "zajednica")
+  const { slug } = use(params)
+  const article = articles.articles.find((article) => article.slug === slug && article.category === "zajednica")
 
   if (!article) {
     notFound()

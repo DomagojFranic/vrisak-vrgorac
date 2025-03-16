@@ -12,6 +12,7 @@ interface ImageGalleryProps {
 export function ImageGallery({ images, alt }: ImageGalleryProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isModalOpen, setIsModalOpen] = useState(false)
+    console.log(images.length)
 
     const handlePrevious = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
@@ -78,8 +79,40 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
 
     return (
         <>
-            <div className="relative h-64 w-full mb-6 rounded-lg overflow-hidden cursor-pointer" onClick={openModal}>
-                <Image src={images[currentIndex] || "/placeholder.svg"} alt={alt} fill className="object-cover" />
+            <div className="relative h-64 w-full mb-6 rounded-lg overflow-hidden cursor-pointer">
+                <Image
+                    src={images[currentIndex] || "/placeholder.svg"}
+                    alt={alt}
+                    fill
+                    className="object-cover"
+                    onClick={openModal}/>
+
+                {/* Left navigation button */}
+                {images.length > 1 && (
+                    <CustomButton
+                        onClick={handlePrevious}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-[#fbb03b] hover:bg-black/60 transition-colors"
+                        aria-label="Prethodna slika">
+                        <ChevronLeft className="h-6 w-6 text-[#fbb03b]" />
+                    </CustomButton>
+                )}
+
+                {/* Right navigation button */}
+                {images.length > 1 && (
+                    <CustomButton
+                        onClick={handleNext}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-[#fbb03b] hover:bg-black/60 transition-colors"
+                        aria-label="Sljedeća slika">
+                        <ChevronRight className="h-6 w-6 text-[#fbb03b]" />
+                    </CustomButton>
+                )}
+
+                {/* Image indicator (small dots or cloud) */}
+                {images.length > 1 && (
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 text-[#fbb03b] px-3 py-1 rounded-full text-xs">
+                        {currentIndex + 1} / {images.length}
+                    </div>
+                )}
             </div>
 
             {isModalOpen && (

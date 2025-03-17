@@ -1,41 +1,41 @@
 import { useCallback, useEffect, useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
-import { cn } from "@/lib/utils"
 import { CustomButton } from "./CustomButton"
+import { cn } from "@/lib/utils"
 
 interface ImageGalleryProps {
     images: string[]
     alt: string
+    className?: string
 }
 
-export function ImageGallery({ images, alt }: ImageGalleryProps) {
+export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isModalOpen, setIsModalOpen] = useState(false)
-    console.log(images.length)
 
-    const handlePrevious = () => {
+    const handlePrevious = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
-    }
+    }, [images.length])
 
-    const handleNext = () => {
+    const handleNext = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
-    }
+    }, [images.length])
 
-    const openModal = () => {
+    const openModal = useCallback(() => {
         setIsModalOpen(true)
-    }
+    }, [])
 
-    const closeModal = () => {
+    const closeModal = useCallback(() => {
         setIsModalOpen(false)
-    }
+    }, [])
     
     {/*Wrapping this function into useCallback to prevent it from being recreated on every render.*/}
     const handleEscKey = useCallback((event: KeyboardEvent) => { 
         if (event.key === "Escape") {
             closeModal()
         }
-    }, [])
+    }, [closeModal])
 
     const handleArrowKeys = useCallback((event: KeyboardEvent) => {
         if (event.key === "ArrowLeft") {
@@ -47,13 +47,13 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
         else if (event.key === "ArrowUp" || event.key === "ArrowDown") {
             event.preventDefault()
         }
-    }, [])
+    }, [handlePrevious, handleNext])
 
-    const handleOutsideClick = (event: MouseEvent) => {
+    const handleOutsideClick = useCallback((event: MouseEvent) => {
         if ((event.target as HTMLElement).id === "modal-background") {
             closeModal()
         }
-    }
+    }, [closeModal])
 
     useEffect(() => {
         if (isModalOpen) {
@@ -67,7 +67,7 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
             document.removeEventListener("keydown", handleArrowKeys)
             document.removeEventListener("mousedown", handleOutsideClick)
         }
-    }, [isModalOpen])
+    }, [isModalOpen, handleEscKey, handleArrowKeys, handleOutsideClick])
 
     if (images.length === 0) {
         return (
@@ -78,8 +78,8 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
     }
 
     return (
-        <>
-            <div className="relative h-64 w-full mb-6 rounded-lg overflow-hidden cursor-pointer">
+        <div className={cn("relative", className)}>
+            <div className="relative h-64 md:h-96 lg:h-[450px] xl:h-[550px] w-full mb-6 rounded-lg overflow-hidden cursor-pointer">
                 <Image
                     src={images[currentIndex] || "/placeholder.svg"}
                     alt={alt}
@@ -157,6 +157,6 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
                     )}
                 </div>
             )}
-        </>
+        </div>
     )
 }

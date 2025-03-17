@@ -7,7 +7,6 @@ import NavigationBar from "@/components/NavBar"
 import articles from "@/data/articles.json"
 import Footer from "@/components/Footer"
 import { ImageGallery } from "@/components/ImageGallery"
-import { generateStaticParams } from "./params"
 import { use } from "react"
 
 interface ArticlePageProps {
@@ -31,7 +30,9 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     <div className="w-full max-w-5xl mx-auto mt-10 px-4">
       <ImageGallery 
         images={article.images || [article.images[0]]} 
-        alt={article.title}/>
+        alt={article.title}
+        // className="lg:h-[600px] xl:h-[700px]" // Increased height for desktop 
+      />
     </div>
 
     {/* Article Content */}

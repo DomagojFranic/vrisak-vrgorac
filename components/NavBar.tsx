@@ -61,7 +61,7 @@ export default function NavigationBar() {
             <Logo className="border-1 rounded-full border-black" />
           </Link>
           <h1 className="hidden lg:block text-2xl md:text-3xl font-medium text-black [text-shadow:_1px_1px_2px_rgba(0,0,0,0.5)]">
-            PČELARSKA UDRUGA „VRISAK" VRGORAC
+            PČELARSKA UDRUGA „VRISAK“ VRGORAC
           </h1>
         </div>
 

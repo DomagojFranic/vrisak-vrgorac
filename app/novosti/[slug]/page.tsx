@@ -7,7 +7,6 @@ import NavigationBar from "@/components/NavBar"
 import articles from "@/data/articles.json"
 import Footer from "@/components/Footer"
 import { ImageGallery } from "@/components/ImageGallery"
-import { generateStaticParams } from "./params"
 import { use } from "react"
 
 interface ArticlePageProps {

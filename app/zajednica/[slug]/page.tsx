@@ -1,5 +1,3 @@
-'use client'
-
 import { notFound } from "next/navigation"
 import { format } from "date-fns"
 import { hr } from "date-fns/locale"
@@ -7,14 +5,11 @@ import NavigationBar from "@/components/NavBar"
 import articles from "@/data/articles.json"
 import Footer from "@/components/Footer"
 import { ImageGallery } from "@/components/ImageGallery"
-import { use } from "react"
 
-interface ArticlePageProps {
-  params: Promise<{ slug: string }>
-}
+export type ArticlePageProps = Promise<{slug: string}>
 
-export default function ArticlePage({ params }: ArticlePageProps) {
-  const { slug } = use(params)
+export default async function ArticlePage(props: { params: ArticlePageProps}) {
+  const { slug } = await props.params;
   const article = articles.articles.find((article) => article.slug === slug && article.category === "zajednica")
 
   if (!article) {
@@ -52,4 +47,10 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 </main>
 
   )
+}
+
+export function generateStaticParams() {
+  return articles.articles.map((article) => ({
+    slug: article.slug,
+  }));
 }

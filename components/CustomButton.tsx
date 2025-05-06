@@ -23,6 +23,7 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
     rightIcon, 
     fullWidth = false,
     disabled,
+    onClick,
     ...props 
   }, ref) => {
     return (
@@ -36,8 +37,8 @@ const CustomButton = React.forwardRef<HTMLButtonElement, CustomButtonProps>(
         size={size}
         disabled={isLoading || disabled}
         ref={ref}
-        {...props}
-      >
+        onClick={onClick}
+        {...props}>
         {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
         {!isLoading && leftIcon}
         <span>{children}</span>

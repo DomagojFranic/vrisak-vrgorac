@@ -1,8 +1,11 @@
+"use client"
+
 import { useCallback, useEffect, useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { CustomButton } from "./CustomButton"
 import { cn } from "@/lib/utils"
+import { useSwipeable } from 'react-swipeable'
 
 interface ImageGalleryProps {
     images: string[]
@@ -21,6 +24,13 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
     const handleNext = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
     }, [images.length])
+
+    const handlers = useSwipeable({
+        onSwipedLeft: handleNext,
+        onSwipedRight: handlePrevious,
+        preventScrollOnSwipe: true,
+        trackMouse: true
+    })
 
     const openModal = useCallback(() => {
         setIsModalOpen(true)
@@ -57,17 +67,22 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
 
     useEffect(() => {
         if (isModalOpen) {
-            document.addEventListener("keydown", handleEscKey)
-            document.addEventListener("keydown", handleArrowKeys)
-            document.addEventListener("mousedown", handleOutsideClick)
+            document.body.classList.add("overflow-hidden");
+            document.addEventListener("keydown", handleEscKey);
+            document.addEventListener("keydown", handleArrowKeys);
+            document.addEventListener("mousedown", handleOutsideClick);
+        } 
+        else {
+            document.body.classList.remove("overflow-hidden");
         }
 
         return () => {
-            document.removeEventListener("keydown", handleEscKey)
-            document.removeEventListener("keydown", handleArrowKeys)
-            document.removeEventListener("mousedown", handleOutsideClick)
-        }
-    }, [isModalOpen, handleEscKey, handleArrowKeys, handleOutsideClick])
+            document.body.classList.remove("overflow-hidden");
+            document.removeEventListener("keydown", handleEscKey);
+            document.removeEventListener("keydown", handleArrowKeys);
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, [isModalOpen, handleEscKey, handleArrowKeys, handleOutsideClick]);
 
     if (images.length === 0) {
         return (
@@ -79,7 +94,7 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
 
     return (
         <div className={cn("relative", className)}>
-            <div className="relative h-64 md:h-96 lg:h-[450px] xl:h-[550px] w-full mb-6 rounded-lg overflow-hidden cursor-pointer">
+            <div {...handlers} className="relative h-64 md:h-96 lg:h-[450px] xl:h-[550px] w-full mb-6 rounded-lg overflow-hidden cursor-pointer">
                 <Image
                     src={images[currentIndex] || "/placeholder.svg"}
                     alt={alt}
@@ -116,20 +131,32 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
             </div>
 
             {isModalOpen && (
-                <div id="modal-background" className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+                <div id="modal-background" className="fixed inset-0 bg-black z-50 flex items-center justify-center p-4">
                     <CustomButton
-                        onClick={closeModal}
-                        className="absolute top-4 right-4 text-white hover:text-primary"
-                        aria-label="Zatvori">
-                        <X className="h-8 w-8 text-[#fbb03b]"/>
-                    </CustomButton>
+  onClick={closeModal}
+  className="
+    fixed  // Changed from absolute
+    top-6 
+    right-4 
+    !p-3  // Force padding
+    text-white 
+    hover:text-primary
+    z-[9999]  // Ensure highest priority
+    safe-area-top  // Handle device notches
+    min-[400px]:top-4  // Adjust for larger screens
+  "
+  aria-label="Zatvori"
+>
+  <X className="h-8 w-8 text-[#fbb03b] pointer-events-none" />
+</CustomButton>
+
 
                     {images.length > 1 && (
                         <CustomButton
                             onClick={handlePrevious}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-white hover:bg-black/60 transition-colors"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 text-[#fbb03b] hover:bg-black/60 transition-colors z-50"
                             aria-label="Prethodna slika">
-                            <ChevronLeft className="h-8 w-8 text-[#fbb03b]" />
+                            <ChevronLeft className="h-6 w-6 text-[#fbb03b]" />
                         </CustomButton>
                     )}
 

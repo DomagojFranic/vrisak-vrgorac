@@ -8,7 +8,7 @@ export default function Zajednica() {
         <main className="min-h-screen flex flex-col">
             <NavigationBar />
 
-            <div className="flex-1 max-w-full mx-auto p-8 rounded-lg">
+            <div className="flex-1 max-w-full mx-auto p-2 rounded-lg p-4 sm:p-6 md:p-8">
                 <News articles={articles.articles} category="zajednica"/>
             </div>
 

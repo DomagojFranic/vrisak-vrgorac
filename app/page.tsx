@@ -24,7 +24,9 @@ export default function Home() {
           loop
           muted
           disablePictureInPicture
-          controlsList="none">
+          controlsList="none"
+          playsInline
+          webkit-playsinline="true">
           <source src="/intro.mp4" type="video/mp4" />
         </video>
       </div>

@@ -31,7 +31,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
       <ImageGallery 
         images={article.images || [article.images[0]]} 
         alt={article.title}
-        // className="lg:h-[600px] xl:h-[700px]" // Increased height for desktop 
+        className="lg:h-[600px] xl:h-[700px]" // Increased height for desktop 
       />
     </div>
 

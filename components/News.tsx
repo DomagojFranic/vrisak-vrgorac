@@ -14,7 +14,7 @@ export default function News({ articles, category }: NewsSectionProps) {
     const filteredArticles = articles.filter((article) => article.category === category);
 
     return (
-        <section className="py-8 px-8 rounded-md">
+        <section className="py-8 px-2 sm:px-8 rounded-md w-full">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold text-black ml-1 mb-8 underline underline-offset-8 decoration-[#fbb03b]">
                     {category === "novosti" ? "Novosti" : "U zajednici"}
@@ -30,17 +30,17 @@ export default function News({ articles, category }: NewsSectionProps) {
                     </div>
                 )}
 
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 px-2 sm:px-4 md:px-8">
                     {filteredArticles.map((article) => (
                     <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-row items-start gap-4">
                         <Link href={`/${category}/${article.slug}`} key={article.id} className="flex flex-row w-full">
                             {/* Image Section */}
-                            <div className="relative w-[30%] h-auto aspect-video">
+                            <div className="relative w-[30%] h-auto aspect-video ml-2">
                                 <Image
                                     src={article.images[0] || "/placeholder.svg"}
                                     alt={article.title}
                                     fill
-                                    className="object-cover rounded-md"/>
+                                    className="object-cover rounded-sm"/>
                             </div>
 
                             {/* Text Section */}
